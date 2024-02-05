@@ -27,7 +27,11 @@ const WeatherInfo = ({search, inputEvent, weather, main, city}) => {
               </div>
             </div>
         </>
-        :<h2>No data found</h2>}
+        :
+        <>
+          <img src="./icons/unknown.png" alt="!weather" className='py-2' />
+          <h2>No data found</h2>
+        </>}
     </div>
   )
 }
