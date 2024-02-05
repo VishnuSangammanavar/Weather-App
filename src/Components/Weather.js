@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { weatherUrl, key } from '../Api';
+import { weatherUrl, forecastUrl, key } from '../Api';
 import WeatherInfo from './WeatherInfo';
 import WeatherForecast from './WeatherForecast';
 
@@ -19,7 +19,7 @@ const Weather = () => {
     useEffect(() => {
         const getData = async () => {
           const weatherFetch = await fetch(`${weatherUrl}q=${search}&units=Metric&appid=${key}`);
-          const forecastFetch = await fetch(`${weatherUrl}q=${search}&units=Metric&appid=${key}`);
+          const forecastFetch = await fetch(`${forecastUrl}q=${search}&units=Metric&appid=${key}`);
         
           Promise.all([weatherFetch, forecastFetch])
           .then(async (response) => {
