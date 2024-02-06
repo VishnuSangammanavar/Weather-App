@@ -41,7 +41,7 @@ section {
   align-items: center;
   justify-content: start;
   color: #fff;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
 }
 
 .weather .weather-info .search {
