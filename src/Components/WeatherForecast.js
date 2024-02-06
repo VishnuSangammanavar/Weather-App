@@ -37,7 +37,8 @@ const WeatherForecast = ({formatDate, sunRaiseSunSet, weather, main, list, city,
             </div>
             {main && city?
                 <div className="highlights">
-                    <div className="row gap-4 d-flex justify-content-center">
+                    <h4 className='py-2'>Today's Highlights</h4>
+                    <div className="row gap-lg-4 gap-md-3 d-flex justify-content-center">
                     <div className="col-lg-3 col-md-3 highlight-item">
                         <h3>Feels like</h3>
                         <h2><ThermostatIcon fontSize='large' />{Math.round(main.feels_like)}°C</h2>
