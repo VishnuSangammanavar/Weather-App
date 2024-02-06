@@ -3,6 +3,7 @@ import Search from './Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import AirIcon from '@mui/icons-material/Air';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 
 const WeatherInfo = ({search, inputEvent, weather, main, city, hour, peroid}) => {
   return (
@@ -34,6 +35,7 @@ const WeatherInfo = ({search, inputEvent, weather, main, city, hour, peroid}) =>
         <>
           <img src="./icons/unknown.png" alt="!weather" className='py-2' />
           <h2>No data found</h2>
+          <p><TravelExploreIcon /> Search proper city name</p>
         </>}
       </div>
     </div>
