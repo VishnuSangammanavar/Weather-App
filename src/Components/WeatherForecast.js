@@ -5,10 +5,11 @@ import WbTwilightIcon from '@mui/icons-material/WbTwilight';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import CompressIcon from '@mui/icons-material/Compress';
 
-const WeatherForecast = ({formatDate, sunRaiseSunSet, weather, main, list, city}) => {
+const WeatherForecast = ({formatDate, sunRaiseSunSet, weather, main, list, city, hour, peroid}) => {
   return (
-    <div className="col-lg-9 col-md-8 weather-forecast" style={{ backgroundImage: "url('./bg.jpg')" }}>
+    <div className="col-lg-9 col-md-8 weather-forecast" style={ {backgroundImage: `${(hour>5) && (peroid === 'PM')? "url('./img/night.jpg')": "url('./img/day.jpg')"}`} }>
         <div className="content">
             <div className="date">
                 <h1>{formatDate(1)}</h1>
@@ -39,11 +40,11 @@ const WeatherForecast = ({formatDate, sunRaiseSunSet, weather, main, list, city}
                     <div className="row gap-4 d-flex justify-content-center">
                     <div className="col-lg-3 col-md-3 highlight-item">
                         <h3>Feels like</h3>
-                        <h2><ThermostatIcon fontSize='large' />{Math.round(main.feels_like)}°C</h2>
+                        <h2><ThermostatIcon color='action' fontSize='large' />{Math.round(main.feels_like)}°C</h2>
                     </div>
                     <div className="col-lg-4 col-md-3 highlight-item">
                         <h3>Wind status</h3>
-                        <h2><AirIcon color='info' fontSize='large' /> {weather.wind.speed} m/h</h2>
+                        <h2><AirIcon color='action' fontSize='large' /> {weather.wind.speed} m/h</h2>
                     </div>
                     <div className="col-lg-4 col-md-4 highlight-item">
                         <h3>Sunrise & Sunset</h3>
@@ -52,15 +53,15 @@ const WeatherForecast = ({formatDate, sunRaiseSunSet, weather, main, list, city}
                     </div>
                     <div className="col-lg-3 col-md-3 highlight-item">
                         <h3>Humidity</h3>
-                        <h2><WaterDropIcon /> {main.humidity}%</h2>
+                        <h2><WaterDropIcon color='action' /> {main.humidity}%</h2>
                     </div>
                     <div className="col-lg-4 col-md-3 highlight-item">
                         <h3>Visibility</h3>
-                        <h2><VisibilityIcon /> {(weather.visibility) / 1000} km</h2>
+                        <h2><VisibilityIcon color='action' /> {(weather.visibility) / 1000} km</h2>
                     </div>
                     <div className="col-lg-4 col-md-4 highlight-item">
                         <h3>Pressure</h3>
-                        <h2>{main.pressure} hPa</h2>
+                        <h2><CompressIcon color='action' /> {main.pressure} hPa</h2>
                     </div>
                     </div>
                 </div>

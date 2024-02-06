@@ -6,7 +6,8 @@ import WeatherForecast from './WeatherForecast';
 const Weather = () => {
 
     const [search, setSearch] = useState("Belagavi");
-
+    const [hour, setHour] = useState(null);
+    const [period, setPeroid] = useState(null);
     const [weather, setWeather] = useState(null);
     const [list, setList] = useState(null);
     const [main, setMain] = useState(null);
@@ -58,6 +59,9 @@ const Weather = () => {
         let month = months[date.getMonth()]
         let year = date.getFullYear()
       
+        setHour(hrs);
+        setPeroid(period)
+
         if (arg === 1) {
           return `${hrs}:${min} ${period}`
         }
@@ -87,8 +91,8 @@ const Weather = () => {
             <div className="row">
             <div className="col-lg-12">
                 <div className="row weather">
-                    <WeatherInfo search={search} inputEvent={inputEvent} weather={weather} main={main} city={city} />
-                    <WeatherForecast formatDate={formatDate} sunRaiseSunSet={sunRaiseSunSet} weather={weather} main={main} list={list} city={city} />
+                    <WeatherInfo search={search} inputEvent={inputEvent} weather={weather} main={main} city={city} hour={hour} peroid={period} />
+                    <WeatherForecast formatDate={formatDate} sunRaiseSunSet={sunRaiseSunSet} weather={weather} main={main} list={list} city={city} hour={hour} peroid={period} />
                 </div>
             </div>
             </div>
