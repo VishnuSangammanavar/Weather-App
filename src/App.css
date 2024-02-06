@@ -223,11 +223,6 @@ section {
   .container {
     height: auto;
   }
-
-  .weather .weather-info,
-  .weather .weather-info .content {
-    height: calc(100vh - 80px);
-  }
   
   .weather .weather-forecast,
   .weather .weather-forecast .content {
