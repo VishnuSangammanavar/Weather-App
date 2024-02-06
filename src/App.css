@@ -194,6 +194,11 @@ section {
   .container {
     height: auto;
   }
+
+  .weather .weather-info,
+  .weather .weather-info .content {
+    height: 100vh;
+  }
   
   .weather .weather-forecast,
   .weather .weather-forecast .content {
@@ -222,6 +227,11 @@ section {
 
   .container {
     height: auto;
+  }
+
+  .weather .weather-info,
+  .weather .weather-info .content {
+    height: 100vh;
   }
   
   .weather .weather-forecast,
