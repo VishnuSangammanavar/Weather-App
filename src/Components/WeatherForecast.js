@@ -9,7 +9,7 @@ import CompressIcon from '@mui/icons-material/Compress';
 
 const WeatherForecast = ({formatDate, sunRaiseSunSet, weather, main, list, city, hour, peroid}) => {
   return (
-    <div className="col-lg-9 col-md-8 weather-forecast" style={ {backgroundImage: `${(hour>5) && (peroid === 'PM')? "url('./img/night.jpg')": "url('./img/day.jpg')"}`} }>
+    <div className="col-lg-9 col-md-8 weather-forecast" style={ {backgroundImage: `${(hour>5) && (peroid === 'PM')? "url('./img/bg2.jpg')": "url('./img/bg1.jpg')"}`} }>
         <div className="content">
             <div className="date">
                 <h1>{formatDate(1)}</h1>
