@@ -6,7 +6,7 @@ import WeatherForecast from './WeatherForecast';
 const Weather = () => {
 
     const [search, setSearch] = useState("Belagavi");
-    const [hour, setHour] = useState(null);
+    const [hour, setHour] = useState(6);
     const [period, setPeroid] = useState(null);
     const [weather, setWeather] = useState(null);
     const [list, setList] = useState(null);
@@ -59,7 +59,7 @@ const Weather = () => {
         let month = months[date.getMonth()]
         let year = date.getFullYear()
       
-        setHour(hrs);
+        // setHour(hrs);
         setPeroid(period)
 
         if (arg === 1) {
