@@ -12,7 +12,7 @@ section {
 }
 
 :root {
-  --bg-color: rgba(33, 35, 156, 0.5);
+  --bg-color: rgba(33, 35, 156);
 }
 
 .weather {
@@ -41,7 +41,7 @@ section {
   align-items: center;
   justify-content: start;
   color: #fff;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
 }
 
 .weather .weather-info .search {
@@ -94,7 +94,6 @@ section {
 .weather .weather-forecast .date {
   width: 100%;
   padding: 10px 0;
-  color: #000;
 }
 
 .weather .weather-forecast .content .date h1,
@@ -127,7 +126,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  background-color: var(--bg-color);
+  background-color: #d1d1d1;
   border-radius: 10px;
 }
 
@@ -143,7 +142,7 @@ section {
 .weather .weather-forecast .highlight-item {
   padding: 15px;
   border-radius: 15px;
-  background-color: var(--bg-color);
+  background-color: #d1d1d1;
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {

@@ -11,7 +11,7 @@ const WeatherForecast = ({formatDate, sunRaiseSunSet, weather, main, list, city,
   return (
     <div className="col-lg-9 col-md-8 weather-forecast" style={ {backgroundImage: "url('./img/bg.jpg')"} }>
         <div className="content">
-            <div className="date" style={ {color: `${(hour>5) && (peroid === 'PM')? 'white': 'black'}`} }>
+            <div className="date">
                 <h1>{formatDate(1)}</h1>
                 <h2>{formatDate(2)}</h2>
             </div>
