@@ -127,7 +127,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  background-color: rgba(135, 185, 189, 0.4);
+  background-color: rgba(112, 139, 188, 0.4);
   border-radius: 10px;
 }
 
@@ -140,10 +140,13 @@ section {
   padding: 20px 0;
 }
 
+.weather .weather-forecast .content .highlights .row {
+  gap: 20px;
+}
 .weather .weather-forecast .highlight-item {
   padding: 15px;
   border-radius: 15px;
-  background-color: rgba(135, 185, 189, 0.4);
+  background-color: rgba(112, 139, 188, 0.4);
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
