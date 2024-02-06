@@ -24,14 +24,23 @@ section {
 }
 
 .weather .weather-info {
+  padding: 0;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--bg-color);
+}
+
+.weather .weather-info .content {
+  width: 100%;
   height: calc(100vh - 40px);
   display: flex;
+  padding: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  padding: 30px;
   color: #fff;
-  background-color: var(--bg-color);
+  backdrop-filter: blur(5px);
 }
 
 .weather .weather-info .search {
@@ -112,7 +121,6 @@ section {
 .weather .weather-forecast .forecast .forecast-item {
   width: 100px;
   height: 100%;
-  color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,7 +141,6 @@ section {
 }
 
 .weather .weather-forecast .highlight-item {
-  color: #000;
   padding: 15px;
   background-color: rgba(33, 35, 156, 0.550);
   border-radius: 15px;
@@ -157,9 +164,6 @@ section {
 
   .weather .weather-info {
     height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
   
   .weather .weather-forecast {

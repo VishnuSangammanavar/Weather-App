@@ -7,7 +7,8 @@ import AirIcon from '@mui/icons-material/Air';
 const WeatherInfo = ({search, inputEvent, weather, main, city, hour, peroid}) => {
 
   return (
-    <div className="col-lg-3 col-md-4 weather-info" style={ {backgroundImage: `${(hour>5) && (peroid === 'PM')? "url('./img/night.jpg')": "url('./img/day.jpg')"}`} }>
+    <div className="col-lg-3 col-md-4 weather-info" style={ {backgroundImage: `${(hour>5) && (peroid === 'PM')? "url('./img/bg2.jpg')": "url('./img/bg1.jpg')"}`} }>
+      <div className="content">
         <Search search={search} inputEvent={inputEvent} />
         {main && city?
         <>
@@ -35,6 +36,7 @@ const WeatherInfo = ({search, inputEvent, weather, main, city, hour, peroid}) =>
           <img src="./icons/unknown.png" alt="!weather" className='py-2' />
           <h2>No data found</h2>
         </>}
+      </div>
     </div>
   )
 }
